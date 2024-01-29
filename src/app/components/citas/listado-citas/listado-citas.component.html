@@ -1,0 +1,72 @@
+<app-header></app-header>
+<div class="title">
+    <br>
+</div>
+<app-spinner *ngIf="loading"></app-spinner>
+<div class="container">
+  <mat-form-field>
+    <mat-label>Filtro</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Buscar" #input autocomplete="off">
+  </mat-form-field>
+
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z5" matSort>
+
+    <ng-container matColumnDef="fechaCita">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Fecha Cita </th>
+      <td mat-cell *matCellDef="let element"> {{element.fechaCita}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="hora">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Hora </th>
+      <td mat-cell *matCellDef="let element"> {{element.hora}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="nombreBarbero">
+      <th mat-header-cell *matHeaderCellDef> Nombre Barbero </th>
+      <td mat-cell *matCellDef="let element"> {{element.nombreBarbero}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="nombreCliente">
+      <th mat-header-cell *matHeaderCellDef> Nombre cliente </th>
+      <td mat-cell *matCellDef="let element"> {{element.nombreCliente}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="telefono">
+      <th mat-header-cell *matHeaderCellDef> Telefono </th>
+      <td mat-cell *matCellDef="let element"> {{element.telefono}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="correoE">
+      <th mat-header-cell *matHeaderCellDef> Correo E </th>
+      <td mat-cell *matCellDef="let element"> {{element.correoE}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="tipoServicio">
+        <th mat-header-cell *matHeaderCellDef> Tipo servicio </th>
+        <td mat-cell *matCellDef="let element"> {{element.tipoServicio}} </td>
+      </ng-container>
+
+    <ng-container matColumnDef="acciones">
+      <th mat-header-cell *matHeaderCellDef> 
+        <button routerLink="/citas" mat-raised-button color="primary">Volver</button>
+      </th>
+      <td mat-cell *matCellDef="let element"> 
+        <mat-icon routerLink="/verCitas/{{element.id}}" class="search" matTooltip="Ver" fontIcon="search"></mat-icon>
+        <mat-icon routerLink="/editarCitas/{{element.id}}" class="edit" matTooltip="Editar" fontIcon="edit"></mat-icon>
+        <mat-icon (click)="eliminarCita(element.id)" class="delete" matTooltip="Eliminar" fontIcon="delete"></mat-icon>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                 showFirstLastButtons
+                 aria-label="Select page of periodic elements">
+  </mat-paginator>
+
+</div>
+
+<app-footer></app-footer>

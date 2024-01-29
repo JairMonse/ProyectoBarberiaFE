@@ -1,0 +1,70 @@
+<app-header></app-header>
+
+<div class="best-pricing section-padding2 position-relative">
+  <div class="section-tittle mb-50">
+    <h2>Inventario</h2>
+  </div>
+
+
+<div class="pricing-img">
+  <img class="pricing-img1" src="assets/img/inventario.jpg" alt="">
+</div>
+</div>
+
+<div class="title">
+  <br>
+</div>
+<app-spinner *ngIf="loading"></app-spinner>
+<div class="container">
+  <mat-card class="card">
+      <mat-card-subtitle>
+          Datos del Inventario
+      </mat-card-subtitle>
+      <form [formGroup]="form" (ngSubmit)="agregarEditarInventario()">
+          <mat-grid-list cols="2" rowHeight="80px">
+            
+              <mat-grid-tile><mat-form-field appearance="outline">
+                  <mat-label>Nombre del Producto</mat-label>
+                  <input formControlName="nombreProducto" matInput>
+                </mat-form-field>
+              </mat-grid-tile>
+
+              <mat-grid-tile><mat-form-field appearance="outline">
+                  <mat-label>Cantidad</mat-label>
+                  <input formControlName="cantidadProducto" matInput>
+                </mat-form-field>
+              </mat-grid-tile>
+
+              
+              <mat-grid-tile><mat-form-field appearance="outline">
+                  <mat-label>Precio</mat-label>
+                  <input formControlName="precio" matInput>
+                </mat-form-field>
+              </mat-grid-tile>
+
+              <mat-grid-tile>
+                  <mat-form-field appearance="outline">
+                      <mat-label>Descripcion</mat-label>
+                      <input formControlName="descripcion" matInput>
+                    </mat-form-field>
+              </mat-grid-tile>
+
+              <mat-grid-tile>
+                  <mat-form-field appearance="outline">
+                      <mat-label>Categoria</mat-label>
+                      <input formControlName="categoria" matInput>
+                    </mat-form-field>
+              </mat-grid-tile>
+
+              <mat-grid-tile [colspan]="2">
+                  <button [disabled]="form.invalid" type="submit" class="btnAceptar" mat-raised-button color="primary">Aceptar</button>
+                  <button mat-raised-button routerLink="/inventario">Volver</button>
+                  
+              </mat-grid-tile>
+            </mat-grid-list>
+            <button mat-raised-button routerLink="/listInventario">Listado inventario</button>
+      </form>
+  </mat-card>
+</div>
+
+<app-footer></app-footer>

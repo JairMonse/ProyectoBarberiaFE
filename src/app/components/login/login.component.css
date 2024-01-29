@@ -1,0 +1,63 @@
+/* Estilos generales */
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .card {
+    padding: 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+  }
+  
+
+  mat-form-field {
+    width: 100%;
+    margin-top: 15px;
+  }
+  
+
+  mat-raised-button {
+    margin-top: 15px;
+  }
+
+  .btnAceptar {
+    background-color: #333;
+    color: white;
+  }
+ 
+  mat-raised-button[routerLink="crear-usuario"] {
+    margin-top: 10px;
+    background-color: #4285f4;
+    color: white;
+  }
+  
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+
+  mat-card-subtitle {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px; 
+  }
+
+  .button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px; 
+  }
+
+  .bi,bi-gear{
+    font-size: 26px;
+  }

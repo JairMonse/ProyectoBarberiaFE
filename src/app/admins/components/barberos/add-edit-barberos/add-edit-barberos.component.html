@@ -1,0 +1,72 @@
+<div class="col w-100 p-3">
+    <div class="card-title w-100 pb-3">
+        <span class="h3 ms-3 text-capitalize">{{title}}</span>
+    </div>
+    <div class="container-sm w-100">
+        <form [formGroup]="form" (ngSubmit)="submit()">
+            <mat-form-field appearance="outline">
+                <mat-label> Nombres </mat-label>
+                <input type="text" matInput autocomplete="off" formControlName="nombres">
+                <mat-icon matPrefix>sensor_occupied</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label> Especialidad </mat-label>
+                <mat-select formControlName="especialidad">
+                    <mat-option *ngFor="let item of listEspecialidades" [value]="item.id"> {{ item.descripcion
+                        }}</mat-option>
+                </mat-select>
+                <mat-icon matPrefix>sports_martial_arts</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label> Jornada </mat-label>
+                <mat-select formControlName="jornada">
+                    <mat-option *ngFor="let item of listJornadas" [value]="item.id"> {{ item.disponibilidad
+                        }}</mat-option>
+                </mat-select>
+                <mat-icon matPrefix>av_timer</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label> Experiencia </mat-label>
+                <input type="number" matInput autocomplete="off" formControlName="experiencia">
+                <mat-icon matPrefix>event_repeat</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label> Teléfono </mat-label>
+                <input type="tel" matInput autocomplete="off" formControlName="telefono">
+                <mat-icon matPrefix>call</mat-icon>
+            </mat-form-field>
+
+            <div class="input-group mt-1">
+                <label class="input-group-text p-1" for="inputGroupFile01">
+                    <mat-icon class="icon-file" matPrefix>upload_file</mat-icon>
+                </label>
+                <input type="file" class="form-control" id="inputGroupFile01" (change)="onFileSelected($event)"
+                    formControlName="imageName">
+            </div>
+
+            <div class="row row-cols-2 mt-4">
+                <div class="col">
+                    <button class="btn btn-danger btn-sm w-100" mat-dialog-close>
+                        <mat-icon> cancel </mat-icon>
+                    </button>
+                </div>
+                <div class="col">
+                    <button class="btn btn-success btn-sm rounded-1 w-100" *ngIf="!bandera" type="submit">
+                        <mat-icon>{{iconName}}</mat-icon>
+                    </button>
+                    <button class="btn btn-success btn-sm rounded-1 w-100" *ngIf="bandera" disabled>
+                        <div class="d-flex justify-content-center align-items-center pb-1">
+                            <div class="spinner-border spinner-border-sm mt-1" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

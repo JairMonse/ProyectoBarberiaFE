@@ -1,0 +1,31 @@
+table {
+    width: 100%;
+  }
+  
+  td,th{
+    width: 15%;
+  }
+
+  .mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .search{
+    cursor: pointer;   
+  }
+
+  .edit{
+    cursor: pointer;
+    color: rgb(40, 201, 56);
+  }
+
+  .delete{
+    cursor: pointer;
+    color: blue;
+  }
+
+  .agregar{
+    font-size: 10px;
+    line-height: 16px;
+  }

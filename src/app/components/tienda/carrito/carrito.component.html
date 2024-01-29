@@ -1,0 +1,28 @@
+<app-header></app-header>
+
+<div class="section-tittle mb-50">
+  <h2 style="text-align: center;">Carrito de Compras</h2>
+</div>
+
+<div class="container mt-5 d-flex justify-content-center align-items-center">
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let item of cartItems">
+      <img [src]="item.carrito.image" class="cart-item-img" alt="{{ item.carrito.name }}">
+      <div>
+        <h5>{{ item.carrito.name }}</h5>
+        <div class="form-group">
+          <label for="cantidad">Cantidad:</label>
+          <input type="number" id="cantidad" [(ngModel)]="item.cantidad" name="cantidad" class="form-control" min="1">
+        </div>
+        <p>Precio unitario: ${{ item.carrito.precio }}</p>
+
+        <p>Total: ${{ item.carrito.precio * item.cantidad }}</p>
+        <button class="btn btn-success" (click)="realizarCompra()">Guardar</button>
+       
+      </div>
+    </li>
+  </ul>
+ 
+</div>
+
+<app-footer></app-footer>

@@ -1,0 +1,126 @@
+<app-header></app-header>
+<div class="best-pricing section-padding2 position-relative">
+  <div class="container">
+    <div class="row pricing-list">
+      <div class="col-xl-7 col-lg-7">
+        <div class="section-tittle mb-50">
+          <h2>¡Ofrecemos los mejores servicios<br> en la ciudad!</h2>
+          <h3>Nuestros Mejores Precios</h3>
+        </div>
+        <!-- Precios -->
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="pricing-list">
+              <ul>
+                <li>Estilismo. . . . . . . . . . . . . . . . . . . . . . . . . . . . <span>$25</span></li>
+                <li>Estilismo + Color. . . . . . . . . . . . . . . . . . . <span>$65</span></li>
+                <li>Estilismo + Tinte. . . . . . . . . . . . . . . . . . . . .<span>$65</span></li>
+                <li>Ondulación semi-permanente. . . . . . . . . . . .<span>$65</span></li>
+                <li>Corte + Estilismo. . . . . . . . . . . . . . . . . . . . . .<span>$63</span></li>
+                <li>Corte + Estilismo + Color. . . . . . . . . . . . . <span>$100</span></li>
+                <li>Corte + Estilismo + Tinte. . . . . . . . . . . . . . .<span>$100</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="pricing-list">
+              <ul>
+                <li>Corte. . . . . . . . . . . . . . . . . . . . . . . . . . . . .<span>$25</span></li>
+                <li>Afeitado. . . . . . . . . . . . . . . . . . . . . . . . . . <span>$65</span></li>
+                <li>Recorte de barba. . . . . . . . . . . . . . . . . . . . <span>$65</span></li>
+                <li>Corte + recorte de barba. . . . . . . . . . . . . . . . <span>$65</span></li>
+                <li>Corte + afeitado. . . . . . . . . . . . . . . . . . . . . . .<span>$63</span></li>
+                <li>Arreglo. . . . . . . . . . . . . . . . . . . . . . . . . . .<span>$100</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Imágenes de precios -->
+  <div class="pricing-img">
+    <img class="pricing-img1" src="assets/img/image7.png" alt="">
+    <img class="pricing-img2" src="assets/img/image8.png" alt="">
+  </div>
+</div>
+
+<div class="container">
+  <mat-card class="card">
+      <mat-card-subtitle>
+          Datos de la cita
+      </mat-card-subtitle>
+      <form [formGroup]="form" (ngSubmit)="agregarEditarCita()">
+          <mat-grid-list cols="2" rowHeight="80px">
+            <mat-grid-tile [colspan]="2">
+              <mat-form-field appearance="outline">
+                <mat-label>Fecha cita</mat-label>
+                <input type="date" formControlName="fechaCita" matInput>
+              </mat-form-field>
+        </mat-grid-tile>
+
+            <mat-grid-tile>
+                  <mat-form-field appearance="outline">
+                      <mat-label>Hora</mat-label>
+                      <!-- <input type="time" formControlName="hora" matInput> -->
+                      <input matInput [ngxTimepicker]="timepicker" formControlName="hora" required>
+                      <ngx-material-timepicker #timepicker></ngx-material-timepicker>
+                    </mat-form-field>
+              </mat-grid-tile>
+                    
+              <mat-grid-tile><mat-form-field appearance="outline">
+                  <mat-label>Nombre del Barbero</mat-label>
+                  <!-- <input formControlName="nombreBarbero" matInput>-->
+                  <mat-select formControlName="nombreBarbero">
+                    <mat-option *ngFor="let nombreBarbero of listaBarberos" [value]="nombreBarbero.valor">
+                      {{nombreBarbero.valor}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </mat-grid-tile>
+
+
+              <mat-grid-tile><mat-form-field appearance="outline">
+                  <mat-label>Nombre del cliente</mat-label>
+                  <input formControlName="nombreCliente" matInput>
+                </mat-form-field>
+              </mat-grid-tile>
+
+              <mat-grid-tile><mat-form-field appearance="outline">
+                  <mat-label>Telefono</mat-label>
+                  <input formControlName="telefono" matInput>
+                </mat-form-field>
+              </mat-grid-tile>
+
+              <mat-grid-tile>
+                  <mat-form-field appearance="outline">
+                      <mat-label>Correo Electronico</mat-label>
+                      <input formControlName="correoE" matInput>
+                    </mat-form-field>
+              </mat-grid-tile>
+
+              <mat-grid-tile>
+                <mat-form-field appearance="outline">
+                  <mat-label>Tipo de servicio</mat-label>
+                  <mat-select formControlName="tipoServicio">
+                    <mat-option *ngFor="let tipoServicio of listaServicios" [value]="tipoServicio.valor">
+                      {{tipoServicio.valor}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </mat-grid-tile>
+
+              <mat-grid-tile [colspan]="2">
+                  <button [disabled]="form.invalid" type="submit" class="btnAceptar" mat-raised-button color="primary">Aceptar</button>
+                  <button mat-raised-button routerLink="/listCitas">Volver</button>
+              </mat-grid-tile>
+              
+            </mat-grid-list>
+            <button  mat-raised-button routerLink="/listCitas">Lista citas</button>
+            
+      </form>
+  </mat-card>
+</div>
+
+
+<app-footer></app-footer>

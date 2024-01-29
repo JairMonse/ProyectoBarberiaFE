@@ -1,0 +1,140 @@
+form {
+  gap: 10px;
+  max-width: 350px;
+  background-color: #212934;
+  color: #fff;
+  border: 1px solid #333;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  padding-left: 30px;
+  color: #FFAE44;
+}
+
+.title::before {
+  width: 18px;
+  height: 18px;
+}
+
+.title::after {
+  width: 18px;
+  height: 18px;
+  animation: pulse 1s linear infinite;
+}
+
+.title::before,
+.title::after {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  left: 0px;
+  background-color: #FFAE44;
+}
+
+.message,
+.signin {
+  font-size: small;
+  color: white;
+}
+
+.flex {
+  display: flex;
+  width: 100%;
+  gap: 6px;
+}
+
+form label {
+  position: relative;
+}
+
+form label input {
+  background-color: #212934;
+  color: #fff;
+  width: 100%;
+  padding: 20px 05px 05px 10px;
+  outline: 0;
+  border: 1px solid rgba(158, 152, 152, 0.397);
+  border-radius: 10px;
+  font-size: small;
+}
+
+form label input+span {
+  color: rgba(255, 255, 255, .8);
+  position: absolute;
+  left: 10px;
+  top: 0px;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+form label input:placeholder-shown+span {
+  top: 12.5px;
+  font-size: 0.9em;
+}
+
+form label input:focus+span,
+form label input:valid+span {
+  color: #FFAE44;
+  top: 0px;
+  font-size: xx-small;
+}
+
+.input {
+  font-size: medium;
+}
+
+.submit {
+  margin-top: 1rem;
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  transform: .3s ease;
+  transition: background-color 0.3s ease;
+  background-color: #FFAE44;
+}
+
+.submit:hover {
+  background-color: #b47e20;
+}
+
+.container-actions button{
+  height: auto;
+  padding: 2px 1rem;
+  display: flex;
+}
+
+.container-actions button mat-icon{
+  font-size: medium;
+  padding-top: 3px;
+}
+
+table {
+  width: 100%;
+}
+
+td,
+th {
+  width: 25%;
+  font-size: .8rem;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}

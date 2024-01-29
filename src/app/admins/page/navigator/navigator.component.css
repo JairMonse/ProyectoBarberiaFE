@@ -1,0 +1,105 @@
+.sidenav-container {
+  height: 100%;
+  background-color: var(--background);
+}
+
+.sidenav {
+  width: 220px;
+  background-color: var(--background);
+  border: none;
+}
+
+.card-client {
+  background: var(--orange);
+  width: 10rem;
+  padding: 25px 20px;
+  padding-bottom: 15px;
+  border: 4px solid #fff;  
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.card-client:hover {
+  transform: translateY(-5px);
+}
+
+.user-picture {
+  overflow: hidden;
+  object-fit: cover;
+  width: 3rem;
+  height: 3rem;
+  border: 4px solid #fff;
+  padding: 3px;
+  border-radius: 999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.user-picture svg {
+  width: 1.5rem;
+  fill: currentColor;
+}
+
+.name-client {
+  margin: 0;
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: medium;
+}
+
+.name-client span {
+  display: block;
+  font-weight: 500;
+  font-size: x-small;
+}
+
+.container {
+  margin: 1rem 0;
+  padding: 0 1.4rem;
+}
+
+.container mat-expansion-panel {
+  background-color: var(--orange);
+}
+
+.container mat-expansion-panel mat-expansion-panel-header mat-panel-description span{
+  color: white;
+  font-size: small;
+}
+
+.container mat-expansion-panel mat-expansion-panel-header mat-panel-title mat-icon {
+  color: var(--background);
+  font-size: medium;
+  transition: all 0.5s;
+  height: auto;
+}
+
+.btn {
+  color: var(--background);
+  text-decoration: none;
+  font-size: 12px;
+  margin: .4rem 0;
+}
+
+.btn mat-icon {
+  font-size: small;
+  margin-right: .2rem;
+  height: auto;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: var(--orange);
+  border-radius: 0 0 0 8px;
+  width: auto;
+}

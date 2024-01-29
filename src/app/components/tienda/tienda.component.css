@@ -1,0 +1,22 @@
+.card {
+    border: 4px solid #19db29;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+  }
+  
+  .card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+
+  .card-img-top {
+    width: 100%; 
+    height: 400px; 
+    object-fit: cover;
+    transition: transform 0.4s;
+  }
+
+  .card:hover .card-img-top {
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen al 110% en hover */
+  }

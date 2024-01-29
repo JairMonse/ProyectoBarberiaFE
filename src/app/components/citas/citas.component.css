@@ -1,0 +1,80 @@
+/* Estilos generales */
+.best-pricing {
+    background-color: #f8f8f8;
+    padding: 80px 0;
+    text-align: center; /* Centra el contenido */
+}
+
+.section-tittle {
+    margin-bottom: 50px; /* Aumenta el espacio entre el título y la tabla */
+}
+
+.section-tittle h3 {
+    display: block;
+    font-size: 24px;
+    color: #be9e21;
+}
+
+.section-tittle h2 {
+    font-size: 36px;
+    color: #333;
+    margin-top: 15px;
+}
+
+/* Estilos de la tabla de precios */
+.pricing-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra los elementos en la tabla */
+}
+
+.pricing-list ul {
+    list-style: none;
+    padding: 0;
+    width: 100%; /* Ajusta según sea necesario */
+    margin: 0 20px; /* Agrega un margen entre las tablas */
+}
+
+.pricing-list li {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 15px 0;
+    font-size: 18px;
+    color: #333;
+    position: relative;
+}
+
+.pricing-list span {
+    font-weight: bold;
+    float: right;
+    color: #be9e21;
+}
+
+
+.img {
+    width: 200px; 
+    height: 200px; 
+    object-fit: cover; 
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+
+
+
+/*---------*/
+.card{
+    margin-top: 10px;
+
+}
+
+mat-form-field{
+    width: 100%;
+    margin: 5px;
+}
+
+.btnAceptar{
+    margin-right:5px ;
+}
+
+

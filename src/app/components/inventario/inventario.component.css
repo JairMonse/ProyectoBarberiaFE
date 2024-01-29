@@ -1,0 +1,28 @@
+.mat-radio-group{
+  font-size: 16px;
+}
+
+.best-pricing {
+  background-color: #f8f8f8;
+  padding: 10px 0;
+  text-align: center; /* Centra el contenido */
+}
+
+.img {
+  width: 200px; 
+  height: 200px; 
+  object-fit: cover; 
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.section-tittle {
+  margin-bottom: 50px; /* Aumenta el espacio entre el título y la tabla */
+}
+
+.section-tittle h2 {
+  font-size: 36px;
+  color: #333;
+  margin-top: 15px;
+}

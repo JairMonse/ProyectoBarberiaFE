@@ -1,0 +1,22 @@
+<app-header></app-header>
+<div class="title">
+    <br>
+</div>
+
+<app-spinner *ngIf="loading"></app-spinner>
+<div *ngIf="inventario != null" class="container">
+    <mat-card class="card">
+        <mat-card-title>Producto: {{inventario.nombreProducto}}</mat-card-title>
+        <mat-card-content>
+            <p><strong>Cantidad:</strong>{{inventario.cantidadProducto}}</p>
+            <p><strong>Precio Unitario:</strong>{{inventario.precio}}</p>
+            <p><strong>Descripcion:</strong>{{inventario.descripcion}}</p>
+            <p><strong>Categoria:</strong>{{inventario.categoria}}</p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button routerLink="/listInventario" mat-stroked-button>Volver</button>
+        </mat-card-actions>
+      </mat-card>    
+</div>
+
+<app-footer></app-footer>

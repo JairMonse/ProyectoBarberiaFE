@@ -1,0 +1,71 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav shadow-none" fixedInViewport
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false">
+
+    <div class="container h-25 m-0 m-auto mt-2 p-0 d-flex justify-content-center align-items-center">
+      <div class="card-client shadow">
+        <div class="user-picture">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path
+              d="M224 256c70.7 0 128-57.31 128-128s-57.3-128-128-128C153.3 0 96 57.31 96 128S153.3 256 224 256zM274.7 304H173.3C77.61 304 0 381.6 0 477.3c0 19.14 15.52 34.67 34.66 34.67h378.7C432.5 512 448 496.5 448 477.3C448 381.6 370.4 304 274.7 304z">
+            </path>
+          </svg>
+        </div>
+        <p class="name-client"> {{nombres}}
+          <span> Administrador</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="px-4 py-2">
+      <hr class="mb-2">
+    </div>
+
+    <mat-nav-list>
+
+      <mat-accordion>
+        <div class="container mt-0 mb-4">
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <mat-icon>person_4</mat-icon>
+              </mat-panel-title>
+              <mat-panel-description>
+                <span>Barberos</span>
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <button class="btn btn-sm btn-link" routerLink="/dashboard/custom-barberos">
+              <mat-icon>settings</mat-icon> Gestionar
+            </button>
+          </mat-expansion-panel>
+        </div>        
+
+      </mat-accordion>
+
+    </mat-nav-list>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content class="overflow-hidden">
+    <mat-toolbar color="primary">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span class="text-capitalize"> Bienvenido</span>
+      <span class="example-spacer"></span>
+      <button mat-icon-button class="example-icon" [matMenuTriggerFor]="menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="cerrarSesion()">
+          <mat-icon>logout</mat-icon>
+          <span>Cerrar Sesión</span>
+        </button>
+      </mat-menu>
+
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

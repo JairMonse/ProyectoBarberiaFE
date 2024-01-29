@@ -1,0 +1,51 @@
+<div class="container mt-4">
+  <section>
+  <mat-card class="card">
+    <mat-card-subtitle>
+      Registrar Clientes
+    </mat-card-subtitle>
+    <form [formGroup]="form" (ngSubmit)="registrarUsuario()" class="container text-center">
+
+      <mat-grid-list cols="2" rowHeight="85px" >
+
+        <mat-grid-tile>
+          <mat-form-field appearance="outline">
+            <mat-label>Cedula</mat-label>
+            <input formControlName="cedula" matInput autocomplete="off">
+            <mat-error *ngIf="this.form.controls['cedula'].hasError('pattern')">El formato no es el requerido
+            </mat-error>
+          </mat-form-field>
+        </mat-grid-tile>
+        
+    <mat-grid-tile>
+          <mat-form-field appearance="outline">
+            <mat-label>Apellidos</mat-label>
+            <input formControlName="apellido" matInput autocomplete="off">
+          </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <mat-form-field appearance="outline">
+            <mat-label>Nombres</mat-label>
+            <input formControlName="nombre" matInput autocomplete="off">
+          </mat-form-field>
+        </mat-grid-tile>
+        
+        <mat-grid-tile>
+          <mat-form-field appearance="outline">
+            <mat-label>Correo e</mat-label>
+            <input formControlName="correoE" matInput autocomplete="off">
+          </mat-form-field>
+        </mat-grid-tile>
+
+
+        <mat-grid-tile [colspan]="2">
+
+          <button  type="submit" class="btnAceptar" mat-raised-button
+            color="primary">Agregar</button>
+          <button mat-raised-button type="button" routerLink="/login">Cancelar</button>
+        </mat-grid-tile>
+
+      </mat-grid-list>
+    </form>
+  </mat-card>

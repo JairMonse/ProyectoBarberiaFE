@@ -1,0 +1,22 @@
+<app-header></app-header>
+<div class="title">
+    <br>
+</div>
+
+<app-spinner *ngIf="loading"></app-spinner>
+<div *ngIf="venta != null" class="container">
+    <mat-card class="card">
+        <mat-card-title>Cliente: {{venta.nombreCliente}}</mat-card-title>
+        <mat-card-content>
+            <p><strong>Nombre Producto:</strong>{{venta.nombreProducto}}</p>
+            <p><strong>Cantidad:</strong>{{venta.cantidad}}</p>
+            <p><strong>Metodo de Pago:</strong>{{venta.metodoPago}}</p>
+            <p><strong>Fecha Registro:</strong>{{venta.fechaRegistro}}</p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button routerLink="/listVenta" mat-stroked-button>Volver</button>
+        </mat-card-actions>
+      </mat-card>    
+</div>
+
+<app-footer></app-footer>

@@ -1,0 +1,25 @@
+<app-header></app-header>
+<div class="title">
+    <br>
+</div>
+
+<app-spinner *ngIf="loading"></app-spinner>
+<div *ngIf="cita != null" class="container">
+    <mat-card class="card">
+        <mat-card-title>Cliente: {{cita.nombreCliente}}</mat-card-title>
+        <mat-card-content>
+            <p><strong>Fecha cita:</strong>{{cita.fechaCita}}</p>
+            <p><strong>Hora:</strong>{{cita.hora}}</p>
+            <p><strong>Nombre Barbero:</strong>{{cita.nombreBarbero}}</p>
+            <p><strong>Tipo servicio:</strong>{{cita.tipoServicio}}</p>
+            <p><strong>Telefono:</strong>{{cita.telefono}}</p>
+            <p><strong>Correo Electronico:</strong>{{cita.correoE}}</p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button routerLink="/listCitas" mat-stroked-button>Volver</button>
+        </mat-card-actions>
+      </mat-card>    
+</div>
+
+
+<app-footer></app-footer>

@@ -1,0 +1,43 @@
+::ng-deep.mat-dialog-container {
+    background-color: var(--background);
+}
+
+.card-title span {
+    color: var(--orange);
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.col mat-icon{
+    font-size: 20px;
+}
+
+.input-group .input-group-text, .form-control{
+    background: none;
+    border: 1px solid #d3caca;
+    font-size: .5rem;
+    padding-top: 1.2rem;
+    height: 3.1rem;
+    border-radius: 5px;
+}
+
+input[type=file]::-webkit-file-upload-button {
+    background: var(--background);
+}
+
+mat-form-field{
+    width: 100%;
+}
+
+.btn-sm{
+    height: 2rem;
+}
+
+.btn mat-icon{
+    font-size: medium;
+    padding-top: .2rem;
+}
+
+input[type="text"]{
+    font-size: small;
+}

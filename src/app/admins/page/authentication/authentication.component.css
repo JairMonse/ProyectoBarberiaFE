@@ -1,0 +1,51 @@
+.container-fluid {
+    background-color: var(--background);
+}
+
+.text-title {
+    font-size: xxx-large;    
+    font-weight: 500;
+}
+
+.text-subtitle {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: x-small;
+    color: #df4719;
+}
+
+.title-login span {
+    font-size: xx-large;
+}
+
+.btn-sm div span {
+    line-height: 1;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.btn-dark {
+    background-color: var(--orange);
+    border: none;
+    transition: ease-in-out 225ms;
+    color: white;
+}
+
+.btn-dark .mat-icon {
+    color: white;
+}
+
+.btn-dark:hover {
+    background-color: #ec4c1c;
+}
+
+.btn-dark:active {
+    background-color: #df4719;
+}
+
+.text-footer span {
+    font-size: small;
+}
+
+mat-icon {
+    color: #df4719;
+}

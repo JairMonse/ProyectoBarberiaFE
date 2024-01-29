@@ -1,0 +1,36 @@
+<app-header></app-header>
+    <div class="container-fluid h-auto">
+        <div class="container mt-5">
+            <div class="row row-cols-3 text-center d-flex align-items-center mb-5">
+                <div class="col">
+                    <p class="m-0 subtitle">Transformamos tu estilo con cortes de alta calidad y atención personalizada.</p>
+                </div>
+                <div class="col container-center d-flex justify-content-center align-items-center">     
+                    <img src="https://cdn-icons-png.flaticon.com/512/1271/1271445.png" alt="Icono"  style="width: 2.3rem;">
+                    <p class="fw-bold m-0 mx-2 h3">BarberPro</p>
+                </div>
+                <div class="col">
+                    <p class="m-0 subtitle">Experimenta la excelencia en cada visita, gracias a nuestros profesionales y productos premium.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-left shadow d-flex align-items-center">
+        <span>Conóce a los mejores barberos</span>
+    </div>
+    <div class="container-horizontal my-5 pb-5">
+        <div class="container ms-2" *ngFor="let items of barberos">
+            <div class="card">
+                <div class="card-img overflow-hidden">
+                    <img src="assets/img/barberos/{{items.imageName}}" style="width: 100%;" alt="">
+                </div>
+                <div class="card-info">
+                  <p class="text-title">{{items.nombres}} </p>
+                  <p class="text-body">{{items.descripcion}}, {{items.experiencia}} años de experiencia</p>
+                </div>
+                <div class="card-footer">
+                <span class="text-title">Teléfono: {{items.telefono}}</span>
+              </div></div>
+        </div>            
+    </div>
+<app-footer></app-footer>

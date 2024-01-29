@@ -1,0 +1,61 @@
+.card {
+    width: 17em;
+    transition: 1s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    border: none;
+}
+
+.card span {
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    display: block;
+    font-size: 1.3em;
+}
+
+.card .info {
+    font-weight: 400;
+    color: black;
+    display: block;
+    text-align: center;
+    font-size: small;
+    margin: 1em;
+}
+
+.card .img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    text-align: center;
+}
+
+img {
+    width: 10.8em;
+}
+
+.card .share {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.card button {
+    padding: 0.4em 1.7em;
+    display: block;
+    margin: auto;
+    margin-top: 1rem;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    background: var(--orange);
+    color: white;
+    transition: .4s ease-in-out;
+}
+
+.card button:hover {
+    background: red;
+    color: white;
+    cursor: pointer;
+}
