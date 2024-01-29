@@ -24,8 +24,14 @@ export class CitasComponent  implements OnInit {
   listaCitas: Citas[] = [];
 
   listaBarberos: Opciones[] = [
-    { id: 1, valor: 'David S' },
-    { id: 2, valor: 'William Q' },
+    { id: 1, valor: 'Ana Martínez' },
+    { id: 2, valor: 'Angelo Merchan' },
+    { id: 3, valor: 'Axel Melten' },
+    { id: 4, valor: 'María González' },
+    { id: 5, valor: 'Carlos Ramírez' },
+    { id: 6, valor: 'Peter Villamar' },
+    { id: 7, valor: 'Juan García' },
+    { id: 7, valor: 'Juan Mendez' },
   ];
 
   listaServicios: Opciones[] = [
