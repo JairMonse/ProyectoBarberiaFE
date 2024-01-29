@@ -31,12 +31,20 @@ export class CitasComponent  implements OnInit {
     { id: 5, valor: 'Carlos Ramírez' },
     { id: 6, valor: 'Peter Villamar' },
     { id: 7, valor: 'Juan García' },
-    { id: 7, valor: 'Juan Mendez' },
+    { id: 8, valor: 'Juan Mendez' },
   ];
 
   listaServicios: Opciones[] = [
     { id: 1, valor: 'Afeitar' },
     { id: 2, valor: 'Corte de pelo' },
+    { id: 3, valor: 'Estilismo' },
+    { id: 4, valor: 'Estilismo + Color' },
+    { id: 5, valor: 'Ondulación semi-permanente' },
+    { id: 6, valor: 'Recorte de barba' },
+    { id: 7, valor: 'Corte + afeitado' },
+    { id: 8, valor: 'Arreglo' },
+    { id: 9, valor: 'Estilismo + Color' },
+    { id: 10, valor: 'Corte + Estilismo + Color' },
   ];
 
   operacion: string = 'Agregar';
